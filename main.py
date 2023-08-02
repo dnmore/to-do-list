@@ -1,4 +1,3 @@
-# To Do List GUI application using Tkinter
 from tkinter import *
 
 GREEN = "#A1CCD1"
@@ -26,7 +25,7 @@ def remove_task():
     tasks.pop(element_index)
 
 
-# ------------------------ SAVE LIST ------------------- #
+# ------------------------ SAVE LIST INTO FILE ------------------- #
 
 def save_list():
     with open("list.txt", mode="w") as file:
