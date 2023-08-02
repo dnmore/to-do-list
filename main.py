@@ -3,6 +3,7 @@ from tkinter import *
 
 GREEN = "#A1CCD1"
 ORANGE = "#E9B384"
+FONT = "Courier"
 
 tasks = []
 
@@ -41,7 +42,7 @@ window.title("ToDo List")
 window.config(padx=20, pady=20, bg=GREEN)
 
 # Entry Label
-entry_label = Label(text="Enter Your Task", bg=GREEN)
+entry_label = Label(text="Enter Your Task", bg=GREEN, font=(FONT, 10))
 entry_label.grid(row=0, column=1)
 
 # Task Entry
@@ -49,11 +50,11 @@ task_entry = Entry(width=30)
 task_entry.grid(row=1, column=1)
 
 # Add Button
-add_button = Button(text="Add", bg=ORANGE, command=add_task)
+add_button = Button(text="Add", bg=ORANGE, font=(FONT, 8, "bold"), command=add_task)
 add_button.grid(row=1, column=2)
 
 # List Label
-list_label = Label(text="Your List", bg=GREEN)
+list_label = Label(text="Your List", bg=GREEN, font=(FONT, 10))
 list_label.grid(row=2, column=1)
 
 # Listbox
@@ -61,11 +62,11 @@ listbox = Listbox(height=10)
 listbox.grid(row=3, column=1)
 
 # Remove Button
-remove_button = Button(text="Remove", bg=ORANGE, command=remove_task)
+remove_button = Button(text="Remove", bg=ORANGE, font=(FONT, 8, "bold"), command=remove_task)
 remove_button.grid(row=4, column=0)
 
 # Save List Button
-save_button = Button(text="Save List", bg=ORANGE, command=save_list)
+save_button = Button(text="Save List", bg=ORANGE, font=(FONT, 8, "bold"), command=save_list)
 save_button.grid(row=4, column=2)
 
 window.mainloop()
